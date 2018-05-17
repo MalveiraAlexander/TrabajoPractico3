@@ -58,4 +58,14 @@ public class Cancion {
         return ("El titulo de la cancion es " + getTitulo() + ", el autor es " + getAutor());
     }
     
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Cancion) {
+            final Cancion c = (Cancion) obj;
+            return this.autor.equals(c.autor) && (this.titulo.equals(c.titulo));
+        } else {
+            return false;
+        }
+    }
+    
 }
