@@ -32,96 +32,96 @@ public class Radio{
         System.out.println(lista);
         
         System.out.println("La primer canción es " + lista.getCancion(0));
-//        System.out.println("La canción en el índice -1 es " + lista.getCancion(-1));
-//        System.out.println("La canción en el índice 6 es " + lista.getCancion(6));
-//        
-//        // Imprimir la última cancion sin usar un literal entero
-//        System.out.println("La última canción es " + lista.getCancion(lista.getCantidadCanciones()-1));
-//        System.out.println();
-//        
-//        System.out.println("Reemplazar la canción en el índice 2 por " + cancion7);
-//        lista.reemplazarCancion(cancion7, 2);
-//        System.out.println(lista);
-//
-//        System.out.println("Reemplazar la canción en el índice -1 por " + cancion3);
-//        lista.reemplazarCancion(cancion3, -1);
-//        System.out.println(lista);
-//
-//        System.out.println("Reemplazar la canción en el índice 5 por " + cancion3);
-//        lista.reemplazarCancion(cancion3, 5);
-//        System.out.println(lista);
-//        
-//        System.out.println("Reemplazar la canción en el índice 6 por " + cancion3);
-//        lista.reemplazarCancion(cancion3, 6);
-//        System.out.println(lista);
-//
-//        System.out.println("Insertar en el índice 6 " + cancion6);
-//        lista.insertarEn(cancion6, 6);
-//        System.out.println(lista);
-//
-//        System.out.println("Insertar en el índice 2 " + cancion8);
-//        lista.insertarEn(cancion8, 2);
-//        System.out.println(lista);
-//
-//        System.out.println("Insertar en el índice -1 " + cancion7);
-//        lista.insertarEn(cancion7, -1);
-//        System.out.println(lista);
-//
-//        System.out.println("Insertar en el índice 0 " + cancion7);
-//        lista.insertarEn(cancion7, 0);
-//        System.out.println(lista);
-//
-//        System.out.println("Insertar en el índice 12 " + cancion9);
-//        lista.insertarEn(cancion9, 12);
-//        System.out.println(lista);
-//
-//        System.out.println("Insertar en el índice 0 " + cancion10);
-//        lista.insertarEn(cancion10, 0);
-//        System.out.println(lista);
+        System.out.println("La canción en el índice -1 es " + lista.getCancion(-1));
+        System.out.println("La canción en el índice 6 es " + lista.getCancion(6));
+        
+        // Imprimir la última cancion sin usar un literal entero
+        System.out.println("La última canción es " + lista.getCancion(lista.getCantidadCanciones()-1));
+        System.out.println();
+        
+        System.out.println("Reemplazar la canción en el índice 2 por " + cancion7);
+        lista.reemplazarCancion(cancion7, 2);
+        System.out.println(lista);
+
+        System.out.println("Reemplazar la canción en el índice -1 por " + cancion3);
+        lista.reemplazarCancion(cancion3, -1);
+        System.out.println(lista);
+
+        System.out.println("Reemplazar la canción en el índice 5 por " + cancion3);
+        lista.reemplazarCancion(cancion3, 5);
+        System.out.println(lista);
+        
+        System.out.println("Reemplazar la canción en el índice 6 por " + cancion3);
+        lista.reemplazarCancion(cancion3, 6);
+        System.out.println(lista);
+
+        System.out.println("Insertar en el índice 6 " + cancion6);
+        lista.insertarEn(cancion6, 6);
+        System.out.println(lista);
+
+        System.out.println("Insertar en el índice 2 " + cancion8);
+        lista.insertarEn(cancion8, 2);
+        System.out.println(lista);
+
+        System.out.println("Insertar en el índice -1 " + cancion7);
+        lista.insertarEn(cancion7, -1);
+        System.out.println(lista);
+
+        System.out.println("Insertar en el índice 0 " + cancion7);
+        lista.insertarEn(cancion7, 0);
+        System.out.println(lista);
+
+        System.out.println("Insertar en el índice 12 " + cancion9);
+        lista.insertarEn(cancion9, 12);
+        System.out.println(lista);
+
+        System.out.println("Insertar en el índice 0 " + cancion10);
+        lista.insertarEn(cancion10, 0);
+        System.out.println(lista);
          
-//        System.out.println("Remover la última canción");
-//        lista.removerEn(lista.getCantidadCanciones()-1);
-//        System.out.println(lista);
-//        
-//        System.out.println("Remover en el índice 3");
-//        lista.removerEn(3);
-//        System.out.println(lista);
-//        
-//        System.out.println("Remover la primer canción");
-//        lista.removerEn(0);
-//        System.out.println(lista);
-//        
-//        System.out.println("Remover " + cancion3);
-//        int indice = lista.encontrarIndice(cancion3);
-//        if (indice > 0) lista.removerEn(indice);
-//        System.out.println(lista);
-//
-//        System.out.println("Remover " + cancion2);
-//        indice = lista.encontrarIndice(cancion2);
-//        if (indice > 0) lista.removerEn(indice);
-//        System.out.println(lista);
-//
-//        System.out.println("Remover " + cancion2);
-//        indice = lista.encontrarIndice(cancion2);
-//        lista.removerEn(indice);
-//        System.out.println(lista);
-//        
-//        if (lista.contiene(cancion7)) {
-//            System.out.println("Remover " + cancion7);
-//            lista.removerEn(lista.encontrarIndice(cancion7));
-//            System.out.println(lista);
-//        }
-//        
-//        if (lista.contiene(cancion7)) {
-//            System.out.println("Remover " + cancion7);
-//            lista.removerEn(lista.encontrarIndice(cancion7));
-//            System.out.println(lista);
-//        }
-//        
-//        if (lista.contiene(cancion7)) {
-//            System.out.println("Remover " + cancion3);
-//            lista.removerEn(lista.encontrarIndice(cancion3));
-//            System.out.println(lista);
-//        }        
+        System.out.println("Remover la última canción");
+        lista.removerEn(lista.getCantidadCanciones()-1);
+        System.out.println(lista);
+        
+        System.out.println("Remover en el índice 3");
+        lista.removerEn(3);
+        System.out.println(lista);
+        
+        System.out.println("Remover la primer canción");
+        lista.removerEn(0);
+        System.out.println(lista);
+        
+        System.out.println("Remover " + cancion3);
+        int indice = lista.encontrarIndice(cancion3);
+        if (indice > 0) lista.removerEn(indice);
+        System.out.println(lista);
+
+        System.out.println("Remover " + cancion2);
+        indice = lista.encontrarIndice(cancion2);
+        if (indice > 0) lista.removerEn(indice);
+        System.out.println(lista);
+
+        System.out.println("Remover " + cancion2);
+        indice = lista.encontrarIndice(cancion2);
+        lista.removerEn(indice);
+        System.out.println(lista);
+        
+        if (lista.contiene(cancion7)) {
+            System.out.println("Remover " + cancion7);
+            lista.removerEn(lista.encontrarIndice(cancion7));
+            System.out.println(lista);
+        }
+        
+        if (lista.contiene(cancion7)) {
+            System.out.println("Remover " + cancion7);
+            lista.removerEn(lista.encontrarIndice(cancion7));
+            System.out.println(lista);
+        }
+        
+        if (lista.contiene(cancion7)) {
+            System.out.println("Remover " + cancion3);
+            lista.removerEn(lista.encontrarIndice(cancion3));
+            System.out.println(lista);
+        }        
     }
 }

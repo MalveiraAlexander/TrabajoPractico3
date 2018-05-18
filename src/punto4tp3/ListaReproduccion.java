@@ -6,7 +6,6 @@
 package punto4tp3;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 /**
  *
@@ -14,22 +13,18 @@ import java.util.Scanner;
  */
 public class ListaReproduccion {
 
-    private Cancion[] song;
-    private int i = 0;
-    private int ultimoElemento;
-
+    private Cancion song[];
+    private int i;
+    
     public ListaReproduccion() {
-        song = new Cancion[10];
-        ultimoElemento = -1;
+        song = new Cancion[1];
+        i = 0;
     }
 
     public void insertar(Cancion nuevaCancion) {
-        
-//        if (song.length - 1 == i) {
-//            
-//        }
-//        
-//        Cancion nuevaLista[] = Arrays.copyOf(song, song.length + 1);
+
+        Cancion nuevaLista[] = Arrays.copyOf(song, song.length + 1);
+        song = nuevaLista;
         song[i] = nuevaCancion;
         i++;
     }
@@ -41,7 +36,7 @@ public class ListaReproduccion {
             if (indice < 0) {
                 System.out.println("Error!... Enserio? Indice " + indice + "? intetalo de nuevo -_-");
             }
-            if (!existeIndice(indice)) {
+            if (!existeIndice(indice) && !(indice < 0)) {
                 System.out.println("Error! Indice no encontrado...");
             }
 
@@ -50,7 +45,18 @@ public class ListaReproduccion {
     }
 
     public void removerEn(int indice) {
-
+        song[indice] = null;
+        Cancion nuevaLista[] = Arrays.copyOf(song, song.length - 1);
+        if (existeIndice(indice)) {
+            for (i = 0; i < indice - 1; i++) { //desplazar los elementos
+                nuevaLista[i] = nuevaLista[i + 1];
+            }
+           song = nuevaLista;
+            
+        }
+        if (indice < 0 || indice > song.length) {
+            return;
+        }
     }
 
     public void insertarEn(Cancion nuevaCancion, int indice) {
@@ -62,19 +68,20 @@ public class ListaReproduccion {
             nuevaLista[indice] = nuevaCancion;
             song = nuevaLista;
         }
-        if (indice < 0 || indice > song.length + 1) {
-            nuevaLista[nuevaLista.length] = nuevaCancion;
+        if (indice < 0 || indice > song.length) {
             song = nuevaLista;
+            song[song.length - 1] = nuevaCancion;
+            
         }
 
     }
 
     public int getCantidadCanciones() {
-        return song.length + 1;
+        return song.length;
     }
 
     public int encontrarIndice(Cancion cancionRequerida) {
-        int x = -1;
+        int x = 0;
         for (int j = 0; j < song.length; j++) {
             if (song[j] == cancionRequerida) {
                 x = j;
@@ -94,17 +101,24 @@ public class ListaReproduccion {
     }
 
     private boolean existeIndice(int indice) {
-        if (indice <= song.length - 1 && indice > 0) {
-            return true;
+        if (indice <= song.length - 1) {
+            if (indice >= 0) {
+                return true;
+            }
         }
         return false;
     }
 
     public Cancion getCancion(int indice) {
         if (existeIndice(indice)) {
-            song[indice].toString();
+            return song[indice];
         }
         return null;
+    }
+    
+    @Override
+    public String toString(){
+        return Arrays.toString(song);
     }
 
 }

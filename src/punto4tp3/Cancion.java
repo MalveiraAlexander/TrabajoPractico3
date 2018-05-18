@@ -55,7 +55,7 @@ public class Cancion {
     
     @Override
     public String toString(){
-        return ("El titulo de la cancion es " + getTitulo() + ", el autor es " + getAutor());
+        return (getTitulo());
     }
     
     @Override
